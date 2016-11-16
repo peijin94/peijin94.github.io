@@ -8,7 +8,8 @@ image:
   thumb: GTX.jpg
 ---
 
-# On the endless way of OPTIMIING
+# On the endless way of OPTIMIZING
+
 
 
 
