@@ -3,9 +3,12 @@ layout: article
 title:  Talk about GPU calculate
 modified: 2016-11-16
 image:
-  feature: GTX.jpg
-  teaser: GTX.jpg
-  thumb: GTX.jpg
+  feature: CUDA_Visual.jpg
+  teaser: CUDA_Visual.jpg
+  thumb: CUDA_Visual.jpg
+
+
+
 ---
 
 # On the endless way of OPTIMIZING
