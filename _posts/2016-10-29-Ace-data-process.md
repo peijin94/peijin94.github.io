@@ -6,7 +6,8 @@ image:
   feature: solar-wind.jpg
   teaser: solar-wind-thumb.jpg
   thumb: solar-wind.jpg
-categories: idl
+categories: Solar-Data
+
 ---
 
 # 修改idlpackage的一个.pro程序使它更通用

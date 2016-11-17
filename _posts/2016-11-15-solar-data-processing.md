@@ -6,7 +6,7 @@ image:
   feature: blog-article/solar.jpg
   teaser: solar.jpg
   thumb: solar.jpg
-categories: idl
+categories: Solar-Data
 ---
 
 # Art of Data（AIA数据的获得和处理）
