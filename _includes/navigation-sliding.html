@@ -1,20 +1,20 @@
 <nav role="navigation" id="js-menu" class="sliding-menu-content">
   <h5>{{ site.title }} <span>{{ site.data.messages.locales[site.locale].toc }}</span></h5>
   <h5 style="font-size:32px">Category</h5>
-	<ul class = "menu-item">
+	<div class = "menu-item">
 		{% for category in site.categories %}
-		<li style="font-size:24px;margin:0px;padding:0px;height:30px">
-		<a title="view all posts">{{ category | first }} ({{ category | last | size }}) </a>
-		<ul>
+		<div style="font-size:24px margin:20px">
+		<a style="font-size:32px" title="view all posts">{{ category | first }} ({{ category | last | size }}) </a>
+		<div>
 		{% for post in category.last %}
-			<li><a href="{{ post.url }}">{{ post.title }} ({{ post.date | date:"%d/%m/%Y"}})</a></li>
+			<p style="margin:0px;padding:0px"><a href="{{ post.url }}">{{ post.title }} ({{ post.date | date:"%d/%m/%Y"}})</a></p>
 		{% endfor %}
-		</ul>
-		</li>
+		</div>
+		</div>
 		{% endfor %}
-	</ul>
+	</div>
 	
-	<ul class="menu-item">
+	<ul class="menu-item" style="margin-top:20px">
     {% for link in site.data.navigation %}<li>
       <a href="{{ site.url }}{{ link.url }}">
         {% if link.image %}<img src="{{ site.url }}/images/{{ link.image }}" alt="teaser" class="teaser">{% endif %}

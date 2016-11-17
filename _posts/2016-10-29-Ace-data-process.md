@@ -3,10 +3,10 @@ layout: article
 title:  ACE data process
 modified: 2016-11-16
 image:
-  feature: solar-wind.png
+  feature: solar-wind.jpg
   teaser: solar-wind-thumb.jpg
-  thumb: solar-wind.png
-categories: [Data,  idl]
+  thumb: solar-wind.jpg
+categories: idl
 ---
 
 # 修改idlpackage的一个.pro程序使它更通用
@@ -175,6 +175,10 @@ for i=0,n_date-1 do begin
   mon=strmid(datearr[i],4,2)
   search_path=datapath+year+'_'+mon
   file=file_search(search_path+'/ac_h0_mfi_'+datearr[i]+'_v*.cdf')
+  if file[0] ne '' then mfi_files=[mfi_files,file[n_elements(file)-1]]
+  file=file_search(search_path+'/ac_h0_swe_'+datearr[i]+'_v*.cdf')
+  if file[0] ne '' then swe_files=[swe_files,file[n_elements(file)-1]]
+endfor
 ```
 
 所以程序所对应的文件路径应该是如下格式
@@ -187,6 +191,27 @@ for i=0,n_date-1 do begin
 
     ......
 
-     
 
-所以为了能使用这个程序需要修改一下数据文件索引的部分
+所以为了能使用这个程序需要修改一下数据文件索引的部分，就是这个循环内会指派一个YYYY_MM格式的时间文件夹作为search_path，而且下面会根据时间来寻找对应的mfi和swe文件，而普通用户对数据库只有读权限，所以最方便的方法是把数据拷贝到本地的一个文件夹假设是plot_root，然后以这个问件夹为寻找数据的根目录，总之每次程序会根据时间段去寻找需要的数据的问件名，所以就把所有可能用到的问件统一放在一个固定的文件夹内然后把程序的寻找问件的部分修改成
+
+```idl
+for i=0,n_date-1 do begin
+  search_path='./plot_root'
+  file=file_search(search_path+'/ac_h0_mfi_'+datearr[i]+'_v*.cdf')
+  if file[0] ne '' then mfi_files=[mfi_files,file[n_elements(file)-1]]
+  file=file_search(search_path+'/ac_h0_swe_'+datearr[i]+'_v*.cdf')
+  if file[0] ne '' then swe_files=[swe_files,file[n_elements(file)-1]]
+endfor
+```
+
+然后以以下形式调用：
+
+``` idl
+ace_plots,'2015-11-07','2015-11-08',['V_gsec', 'V_gsmc','Np', 'Tp', 'alpha_ratio'],datapath='/path/to/workspace/which/contains/plot_root'
+```
+
+就可以给出正确的图片，当然，在运行这个画图序之前要编译一下cdaweb，运行命令@compile_cdaweb，就成
+
+结果：
+
+![image](/images/blog-article/ace-plot.png)
