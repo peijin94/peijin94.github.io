@@ -22,8 +22,6 @@ gems:
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
-
-
 # Site owner
 owner:
   name:
