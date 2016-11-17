@@ -25,9 +25,9 @@ gems:
 
 
 # Site owner
-owner: Pjer
-  name: Peijin.Zhang
-  email:pjer1316@outlook.com
+owner:
+  name:
+  email:
   twitter:
   google:
     ad-client:
