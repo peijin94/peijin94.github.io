@@ -6,7 +6,7 @@ image:
   feature: CUDA_Visual.jpg
   teaser: CUDA_Visual.jpg
   thumb: CUDA_Visual.jpg
-categories: c/c++
+categories: CUDA[c++]
 ---
 
 # On the endless way of OPTIMIZING
