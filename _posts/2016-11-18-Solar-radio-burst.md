@@ -50,3 +50,17 @@ categories: plasma
 7. 通常III型射电爆都有较低程度的圆偏振度（i.e. 0.15）
 
 8. 在0.3AU 到 1AU之间，有有效观测证明III型射电爆和电子束流和郎缪波有直接联系。
+
+
+
+### 射电爆来源的图示
+
+![burst](/images/blog-article/solar-burst-2.png)
+
+图片来自 *GEOPHYSICS AND ASTROPHYSICS MONOGRAPHS* 
+
+### IIIb型射电爆：
+
+![burst](/images/blog-article/solar-burst-3.png)
+
+图片来自 *GEOPHYSICS AND ASTROPHYSICS MONOGRAPHS* 
