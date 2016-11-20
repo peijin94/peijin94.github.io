@@ -64,3 +64,9 @@ categories: plasma
 ![burst](/images/blog-article/solar-burst-3.png)
 
 图片来自 *GEOPHYSICS AND ASTROPHYSICS MONOGRAPHS* 
+
+### flare数值模拟：
+
+![burst](/images/blog-article/solar-burst-4.png)
+
+图片来自 *Dynamical evolution of a solar coronal magnetic field arcade (1988 Mikic)* 
