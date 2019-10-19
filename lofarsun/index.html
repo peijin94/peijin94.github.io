@@ -412,6 +412,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#abbreviations" title="Abbreviations" class="md-nav__link">
+    Abbreviations
+  </a>
+  
+</li>
+      
       
       
       
@@ -734,6 +741,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#abbreviations" title="Abbreviations" class="md-nav__link">
+    Abbreviations
+  </a>
+  
+</li>
+      
       
       
       
@@ -757,6 +771,8 @@ Directed by <strong>Pietro Zucca</strong> and <strong>Sarrvesh Sridhar</strong><
 <p>LOFAR can produce high spatial resolution (10asec) interferometry
 image at 6 Frame per Second. This document shows the reduction process
 of the solar imaging and dynamic spectrum data.</p>
+<p>All the code mentioned in this page can be found in <a href="https://github.com/Pjer-zhang/LOFAR_Solar">github</a></p>
+<p>Some of the frequently used functions have been packed into a module : <strong>LofarSun</strong>, a simple demo :  <a href="/static/demo.html">demo</a></p>
 <h2 id="calibration">Calibration<a class="headerlink" href="#calibration" title="Permanent link">&para;</a></h2>
 <p>The calibration uses a well know and stable source to convert all the
 signals received by different antenna to a same reference level.</p>
@@ -884,9 +900,7 @@ by Peijin.Zhang 2019</p>
 <p>-o --out Save the result without display</p>
 <p>example:</p>
 <div class="codehilite"><pre><span></span>displayws.py fname.fits -t -n
-
 displayws.py fname.fits
-
 displayws.py fname.fits -o save.png
 </pre></div>
 
@@ -1037,7 +1051,7 @@ into consideration.</p>
 <p>Note that the multiscale parameter is extremely time comsuming, for my
  case, it takes about 50x times of calculation resource to generate a
  image.</p>
-<p>Abbreviations</p>
+<h2 id="abbreviations">Abbreviations<a class="headerlink" href="#abbreviations" title="Permanent link">&para;</a></h2>
 <p><strong>FOV</strong> field of view</p>
 <p><strong>FPS</strong> frame per second</p>
 <p><strong>PSF</strong> Point source spread</p>
