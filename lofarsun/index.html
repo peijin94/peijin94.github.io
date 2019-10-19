@@ -1,0 +1,1158 @@
+
+
+
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+
+    <!--self add-->
+    <meta name="baidu-site-verification" content="NspxvfV71O" />
+    <meta name="google-site-verification" content="2HJJOYg39UZE-o00wEaPrb9Td7dmBZhtNuqmdXuLLnU" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Peijin's Personal website">
+      
+      
+      
+        <meta name="author" content="Peijin Zhang">
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="jp">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.2.0">
+    
+    
+      
+        <title>LOFAR - Peijin Zhang</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.572ca0f0.css">
+      
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.8c900955.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../my.css">
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#lofar-solar-cookbook" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="Peijin Zhang" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Peijin Zhang
+              </span>
+              <span class="md-header-nav__topic">
+                LOFAR
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="http://home.ustc.edu.cn/~pjer1316/" title="前往 Github 仓库" class="md-source" data-md-source="">
+    
+    <div class="md-source__repository">
+      Home
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../index_ch/" title="Home" class="md-tabs__link md-tabs__link--active">
+          Home
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../matlab/" title="More" class="md-tabs__link">
+          More
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="Peijin Zhang" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Peijin Zhang
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="http://home.ustc.edu.cn/~pjer1316/" title="前往 Github 仓库" class="md-source" data-md-source="">
+    
+    <div class="md-source__repository">
+      Home
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+    
+    <label class="md-nav__link" for="nav-1">
+      Home
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        Home
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../index_ch/" title="张沛锦" class="md-nav__link">
+      张沛锦
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Peijin Zhang" class="md-nav__link">
+      Peijin Zhang
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        LOFAR
+      </label>
+    
+    <a href="./" title="LOFAR" class="md-nav__link md-nav__link--active">
+      LOFAR
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#calibration" title="Calibration" class="md-nav__link">
+    Calibration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#imaging" title="Imaging" class="md-nav__link">
+    Imaging
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#image-inspection" title="Image inspection" class="md-nav__link">
+    Image inspection
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cleaned-image" title="CLEANed image" class="md-nav__link">
+    CLEANed image
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inspect-the-residual-image" title="Inspect the Residual Image" class="md-nav__link">
+    Inspect the Residual Image
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inspect-the-uv-coverage" title="Inspect the UV coverage" class="md-nav__link">
+    Inspect the UV coverage
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#image-brewing" title="Image Brewing" class="md-nav__link">
+    Image Brewing
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scales" title="Scales" class="md-nav__link">
+    Scales
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iteration-steps" title="Iteration steps" class="md-nav__link">
+    Iteration steps
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiscale" title="Multiscale" class="md-nav__link">
+    Multiscale
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../timeline/" title="时间线" class="md-nav__link">
+      时间线
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5" type="checkbox" id="nav-1-5">
+    
+    <label class="md-nav__link" for="nav-1-5">
+      科研
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-5">
+        科研
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../type3auto/" title="三型射电爆自动识别" class="md-nav__link">
+      三型射电爆自动识别
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      More
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        More
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
+    
+    <label class="md-nav__link" for="nav-2-1">
+      编程
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        编程
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../matlab/" title="matlab" class="md-nav__link">
+      matlab
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../idl/" title="IDL" class="md-nav__link">
+      IDL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fortran/" title="Fortran" class="md-nav__link">
+      Fortran
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../optFlow.md" title="算法" class="md-nav__link">
+      算法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../phoneMonitor/" title="LCD" class="md-nav__link">
+      LCD
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2">
+    
+    <label class="md-nav__link" for="nav-2-2">
+      物理
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-2">
+        物理
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../solarPhoton/" title="光子在辐射区的随机行走" class="md-nav__link">
+      光子在辐射区的随机行走
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fastRB/" title="深空快速射电爆" class="md-nav__link">
+      深空快速射电爆
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#calibration" title="Calibration" class="md-nav__link">
+    Calibration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#imaging" title="Imaging" class="md-nav__link">
+    Imaging
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#image-inspection" title="Image inspection" class="md-nav__link">
+    Image inspection
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cleaned-image" title="CLEANed image" class="md-nav__link">
+    CLEANed image
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inspect-the-residual-image" title="Inspect the Residual Image" class="md-nav__link">
+    Inspect the Residual Image
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inspect-the-uv-coverage" title="Inspect the UV coverage" class="md-nav__link">
+    Inspect the UV coverage
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#image-brewing" title="Image Brewing" class="md-nav__link">
+    Image Brewing
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scales" title="Scales" class="md-nav__link">
+    Scales
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iteration-steps" title="Iteration steps" class="md-nav__link">
+    Iteration steps
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiscale" title="Multiscale" class="md-nav__link">
+    Multiscale
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="lofar-solar-cookbook">LOFAR Solar Cookbook<a class="headerlink" href="#lofar-solar-cookbook" title="Permanent link">&para;</a></h1>
+<p>2019 Summer By <strong>Peijin Zhang</strong>
+Directed by <strong>Pietro Zucca</strong> and <strong>Sarrvesh Sridhar</strong></p>
+<p>LOFAR can produce high spatial resolution (10asec) interferometry
+image at 6 Frame per Second. This document shows the reduction process
+of the solar imaging and dynamic spectrum data.</p>
+<h2 id="calibration">Calibration<a class="headerlink" href="#calibration" title="Permanent link">&para;</a></h2>
+<p>The calibration uses a well know and stable source to convert all the
+signals received by different antenna to a same reference level.</p>
+<p>This can be done by following the steps below:</p>
+<ul>
+<li>Create the source.db file with a sky model of the calibrator</li>
+</ul>
+<div class="codehilite"><pre><span></span>makesourcedb <span class="nv">in</span><span class="o">=</span>/path/to/TauA.skymodel <span class="nv">out</span><span class="o">=</span>TauA.sourcedb
+</pre></div>
+
+
+<ul>
+<li>Run auto-weight with NDPPP (Note: this step should be done for both
+    sun and the calibrator):</li>
+</ul>
+<div class="codehilite"><pre><span></span>NDPPP <span class="nv">msin</span><span class="o">=</span>/path/to/calibrator.MS 
+<span class="nv">msout</span><span class="o">=</span>/path/to/calibrator-autow.MS 
+<span class="nv">steps</span><span class="o">=[]</span> 
+
+msin.autoweight<span class="o">=</span>True
+</pre></div>
+
+
+<ul>
+<li>Use the observation of the calibrator to predict the parameters for
+    the calculation applied to the solar observation</li>
+</ul>
+<div class="codehilite"><pre><span></span>NDPPP <span class="nv">msin</span><span class="o">=</span>/path2/to/calibrator-autow.ms <span class="se">\</span>
+<span class="nv">Msout</span><span class="o">=</span>. <span class="se">\</span>
+<span class="nv">steps</span><span class="o">=[</span>gaincal<span class="o">]</span> <span class="se">\</span>
+gaincal.usebeammodel<span class="o">=</span>True  <span class="se">\</span>
+gaincal.solint<span class="o">=</span><span class="m">4</span> <span class="se">\</span>
+gaincal.sources<span class="o">=</span>TauAGG <span class="se">\</span>
+gaincal.sourcedb<span class="o">=</span>TauA.sourcedb <span class="se">\</span>
+gaincal.onebeamperpatch<span class="o">=</span>True <span class="se">\</span>
+gaincal.caltype<span class="o">=</span>diagonal 
+</pre></div>
+
+
+<ul>
+<li>Apply the parameters predicted by step (3)</li>
+</ul>
+<div class="codehilite"><pre><span></span>NDPPP <span class="nv">msin</span><span class="o">=</span>/path2/to/sun-autow.ms <span class="se">\</span>
+<span class="nv">msout</span><span class="o">=</span>. <span class="se">\</span>
+msin.datacolumn<span class="o">=</span>DATA <span class="se">\</span>
+msout.datacolumn<span class="o">=</span>CORR_NO_BEAM <span class="se">\</span>
+<span class="nv">steps</span><span class="o">=[</span>applycal<span class="o">]</span> <span class="se">\</span>
+applycal.parmdb<span class="o">=</span>/path/to/calibrator-autow.MS/instrument <span class="se">\</span>
+applycal.updateweights<span class="o">=</span>True 
+</pre></div>
+
+
+<ul>
+<li>Apply the beam of the calculation for the LOFAR station:</li>
+</ul>
+<div class="codehilite"><pre><span></span>NDPPP <span class="nv">msin</span><span class="o">=</span>sun-autow.MS <span class="se">\</span>
+<span class="nv">msout</span><span class="o">=</span>. <span class="se">\</span>
+msin.datacolumn<span class="o">=</span>CORR_NO_BEAM <span class="se">\</span>
+msout.datacolumn<span class="o">=</span>CORRECTED_DATA <span class="se">\</span>
+<span class="nv">steps</span> <span class="o">=[</span>applybeam<span class="o">]</span> <span class="se">\</span>
+applybeam.updateweights<span class="o">=</span>True 
+</pre></div>
+
+
+<p>The steps (2)-(5) are integrated in the script <strong>auto_sun_calib.py</strong>
+to calibrate the MS files in batch.</p>
+<p>For the solar interferometry, the calibration is essential. Figure 1
+shows the difference between the calibrated and un-calibrated data</p>
+<p><img alt="demoimg" src="../media/image1.png" />
+<img alt="demoimg" src="../media/image2.png" />
+Figure 1. The image result of calibrated and un-calibrated data</p>
+<h2 id="imaging">Imaging<a class="headerlink" href="#imaging" title="Permanent link">&para;</a></h2>
+<p>After the calibration, the produced file [sun-autow.MS] is ready for
+imaging, here we use the software [wsclean] to produce the solar radio
+image from the visibilities. The full document of wsclean can be found
+in this link :
+<a href="https://sourceforge.net/p/wsclean/wiki/Home/">[https://sourceforge.net/p/wsclean/wiki/Home/]{.underline}</a></p>
+<p>For the solar imaging, we use the following parameters:</p>
+<div class="codehilite"><pre><span></span>wsclean -j <span class="m">40</span> -mem <span class="m">30</span> -no-reorder -no-update-model-required <span class="se">\</span>
+-mgain <span class="m">0</span>.3 -weight briggs <span class="m">0</span> -size <span class="m">512</span> <span class="m">512</span> <span class="se">\</span>
+-scale 10asec -pol I -data-column CORRECTED_DATA <span class="se">\</span>
+-niter <span class="m">1000</span> -intervals-out <span class="m">1</span> -interval <span class="m">10</span> <span class="m">11</span> <span class="se">\</span>
+-name /path/to/prefix <span class="se">\</span>
+/path/to/sun-autow.MS
+</pre></div>
+
+
+<p>Larger iterations and more tweaking with these parameters can help
+making a better image. Details about the parameters are introduced in
+the imaging brew section.</p>
+<h2 id="image-inspection">Image inspection<a class="headerlink" href="#image-inspection" title="Permanent link">&para;</a></h2>
+<h3 id="cleaned-image">CLEANed image<a class="headerlink" href="#cleaned-image" title="Permanent link">&para;</a></h3>
+<p>Sometimes we need to interact with the data and see how it looks like
+immediately after the data reduction. It would be efficiency if we can
+plot the data from the shell command and see the image from a pop-up
+window.</p>
+<p>For general purpose of the fits inspection, one can use display or kvis
+command to inspect the image:</p>
+<div class="codehilite"><pre><span></span>display filename.fits
+</pre></div>
+
+
+<p>Or:</p>
+<div class="codehilite"><pre><span></span>module load karma
+kvis filename.fits
+</pre></div>
+
+
+<p>This commands will show you the image without the coordinate:</p>
+<p><img alt="demoimg" src="../media/image3.png" /></p>
+<p><strong>Figure 1.</strong> The image shown in [display]</p>
+<p>For solar image after wsclean, one can use <strong>displayws.py:</strong></p>
+<div class="codehilite"><pre><span></span>python displayws.py -h
+</pre></div>
+
+
+<p>displayws.py version 0.01 [Python2]
+by Peijin.Zhang 2019</p>
+<p>Inspect the LOFAR solar interferometry data produced by wsclean, with
+[RA,DEC] transfered to the Heliocentric coordinate.</p>
+<p>Parameters:</p>
+<p>-t --txt Show the text information of the wsclean fits file</p>
+<p>-n --no-plot Do not show plot</p>
+<p>-h --help Display this information</p>
+<p>-o --out Save the result without display</p>
+<p>example:</p>
+<div class="codehilite"><pre><span></span>displayws.py fname.fits -t -n
+
+displayws.py fname.fits
+
+displayws.py fname.fits -o save.png
+</pre></div>
+
+
+<p>This script can give us a plot of the radio in the Heliocentric coordinate, with Arc-Second axis, and the time and frequency channel will be shown in the title and legend in the plot, also the beam shape given from the parameters given by the fits header:</p>
+<p><strong>[BMAJ]</strong>: The major axis of the beam.</p>
+<p><strong>[BMIN]</strong>: The min axis of the beam</p>
+<p><strong>[BPA]</strong>: The position angel of the major</p>
+<p><img alt="demoimg" src="../media/image4.png" /></p>
+<p><strong>Figure 2.</strong> Solar interferometry shown with displayws.py</p>
+<p>In displayws.py the beam shape experience the same transform as the sun
+to the Heliocentric coordinate. And with <strong>--t --n</strong> arguments, one can
+see the full content of the fits header.</p>
+<div class="codehilite"><pre><span></span>python displayws.py fits<span class="se">\_</span>test<span class="se">\_</span>par/SB028-image.fits -n -t
+</pre></div>
+
+
+<p>output:</p>
+<div class="codehilite"><pre><span></span>[INFO] Do not show the image
+[INFO] Show the header of the wsfile
+SIMPLE = T / file does conform to FITS standard
+BITPIX = -32 / number of bits per data pixel
+NAXIS = 4 / number of data axes
+NAXIS1 = 512 / length of data axis 1
+...
+... //lots of information text
+WSCTIMES= 27250.
+WSCVWSUM= 0.0770765469463797
+HISTORY wsclean -j 40 -mem 30 -no-reorder -no-update-model-required -mgain 0.5 -
+HISTORY weight briggs 0 -size 512 512 -scale 10.5469asec -pol I -data-column COR
+HISTORY RECTED\_DATA -niter 500 -intervals-out 1 -interval 27250 27255 -fit-beam
+HISTORY -make-psf -name /data/scratch/zhang/fits\_test\_par/SB028 /data/scratch/zh
+HISTORY ang/MS/L701913\_SAP000\_SB028\_autow\_uv.MS
+</pre></div>
+
+
+<p>I also recommend the Jupyter Notebook for the data interaction, which
+can show image inline the script.</p>
+<h3 id="inspect-the-residual-image">Inspect the Residual Image<a class="headerlink" href="#inspect-the-residual-image" title="Permanent link">&para;</a></h3>
+<p>For a CLEANed image, one should always check the residual image, if the
+residual image is flat and the positive and negative values are randomly
+distributed. One can judge the quality of a CLEANed image by comparing
+the peak values of the CLEANed image and its residual image:</p>
+<div class="codehilite"><pre><span></span>python displayws.py /path/to/XXX-residual.fits
+</pre></div>
+
+
+<p>A good residual of solar image looks like:</p>
+<p><img alt="demoimg" src="../media/image5.png" /></p>
+<p>Figure 3. The residual image</p>
+<h3 id="inspect-the-uv-coverage">Inspect the UV coverage<a class="headerlink" href="#inspect-the-uv-coverage" title="Permanent link">&para;</a></h3>
+<p>The UV coverage information can be saved by wsclean by append
+<strong>--save-uv</strong> parameter to the wsclean command. And one can inspect the
+UV coverage using the previous script:</p>
+<div class="codehilite"><pre><span></span>python displayws.py /path/to/XXX-uv-real.fits
+</pre></div>
+
+
+<p>If there is '--uv' string in the input file name, it will show the UV
+coverage in wavenumber space. A sample UV coverage looks like:</p>
+<p><img alt="demoimg" src="../media/image6.png" />
+Figure 4. The UV coverage</p>
+<h2 id="image-brewing">Image Brewing<a class="headerlink" href="#image-brewing" title="Permanent link">&para;</a></h2>
+<p>Wsclean is a complex and powerful software, it can produce amazing image
+when the parameters are set properly, in this section, we introduce a
+few parameters that may influence the image result.</p>
+<h3 id="scales">Scales<a class="headerlink" href="#scales" title="Permanent link">&para;</a></h3>
+<p>The <strong>--size</strong> and <strong>--scale</strong> argument controls the dimensions of the
+produced image, <strong>-size</strong> determines the pixel size (2 parameters: width
+and height) of the produced image. <strong>--scale</strong> determines the angular
+with of a pixel.</p>
+<p>The wsclean users should be aware that the image with different size can
+result in totally different image. The following is an example of solar
+imaging with different <strong>--size</strong></p>
+<p>Configuration of image (1)</p>
+<div class="codehilite"><pre><span></span>wsclean -j <span class="m">40</span> -mem <span class="m">80</span> -no-reorder -no-update-model-required<span class="se">\</span>
+-mgain <span class="m">0</span>.7 -weight briggs <span class="m">0</span> -size <span class="m">1000</span> <span class="m">1000</span> <span class="se">\</span>
+-scale 3asec -pol I -auto-mask <span class="m">3</span> <span class="se">\</span>
+-auto-threshold <span class="m">0</span>.3 -data-column CORRECTED_DATA <span class="se">\</span>
+-niter <span class="m">1000</span> -intervals-out <span class="m">1</span> -interval <span class="m">27250</span> <span class="m">27255</span> <span class="se">\</span>
+-fit-beam -make-psf <span class="se">\</span>
+-name /path/to/output/name /path/to/input.MS
+</pre></div>
+
+
+<p>Configuration of image (2)</p>
+<div class="codehilite"><pre><span></span>wsclean -j <span class="m">40</span> -mem <span class="m">80</span> -no-reorder -no-update-model-required<span class="se">\</span>
+-mgain <span class="m">0</span>.7 -weight briggs <span class="m">0</span> -size <span class="m">6000</span> <span class="m">6000</span> <span class="se">\</span>
+-scale 3asec -pol I -auto-mask <span class="m">3</span> <span class="se">\</span>
+-auto-threshold <span class="m">0</span>.3 -data-column CORRECTED_DATA <span class="se">\</span>
+-niter <span class="m">1000</span> -intervals-out <span class="m">1</span> -interval <span class="m">27250</span> <span class="m">27255</span> <span class="se">\</span>
+-fit-beam -make-psf <span class="se">\</span>
+-name /path/to/output/name /path/to/input.MS
+</pre></div>
+
+
+<p><img alt="demoimg" src="../media/image7.png" />
+<img alt="demoimg" src="../media/image8.png" /></p>
+<p><strong>Figure 3.</strong> The comparing of imaging result with diffrerent pixel size
+argument.</p>
+<p>From Figure 3 we can clearly see the difference. Both of the two image
+in Figure 3 have the Field of View (FOV) lager than the sun, which
+contains a strong source. A too large FOV may introduce the signal from
+side-lobe</p>
+<p>The argument <strong>--scale</strong> means the resolution, so this number should be
+"The smaller, the better". While, as mentioned previously, better image
+demands larger FOV. Thus, we should balance between the resolution and
+FOV. In this situation, the best choice is using as large FOV as
+possible with enough resolution. The enough resolution for --scale is
+usually 0.2*beamsize.</p>
+<h3 id="iteration-steps">Iteration steps<a class="headerlink" href="#iteration-steps" title="Permanent link">&para;</a></h3>
+<p>In each number of iteration steps determines how many times the PSF fits
+image, we can either use --niter to manually set the iteration step or
+use --auto-threshold to let wsclean decide when to stop. The parameter
+--niter is an "the more the better" parameter.</p>
+<p><img alt="demoimg" src="../media/image9.png" />
+ <img alt="demoimg" src="../media/image10.png" /></p>
+<p>Figure 5. Comparing between large and small number of iteration</p>
+<p>Small value for <strong>--niter</strong> will give you the fuzzy image with a
+ correct peak value (if there is peak in the image). While, more
+ iteration steps will give you the structure of the source.</p>
+<h3 id="multiscale">Multiscale<a class="headerlink" href="#multiscale" title="Permanent link">&para;</a></h3>
+<p>Wsclean assume the sources to be point source for default configuration,
+this works for most of the astronomy work. The sun itself is a big
+(960arcsec) extended source, and the active region is also non-point
+like. Thus, the extended source needs to be considered for the solar
+imaging. The parameter <strong>--multiscale</strong> is used to take extended source
+into consideration.</p>
+<p>The following is an example of imaging with and without --multiscale.</p>
+<p><img alt="demoimg" src="../media/image11.png" />
+ <img alt="demoimg" src="../media/image12.png" /></p>
+<p>Figure 6. The residual map of the imaging with and without multiscale</p>
+<p>Corresponding wsclean command is:</p>
+<div class="codehilite"><pre><span></span>wsclean -j <span class="m">40</span> -mem <span class="m">90</span> -no-reorder -no-update-model-required <span class="se">\</span>
+-mgain <span class="m">0</span>.8 -weight briggs <span class="m">0</span> -size <span class="m">1024</span> <span class="m">1024</span> <span class="se">\</span>
+-scale 4asec -pol I -auto-mask <span class="m">6</span> -multiscale <span class="se">\</span>
+-auto-threshold <span class="m">2</span> -data-column CORRECTED_DATA <span class="se">\</span>
+-niter <span class="m">2000</span> -intervals-out <span class="m">1</span> -interval <span class="m">27250</span> <span class="m">27255</span> <span class="se">\</span>
+-fit-beam -make-psf -name <span class="se">\</span>
+/data/scratch/zhang/fits_test_par/SB048testx <span class="se">\</span>
+/data/scratch/zhang/MS/L701913_SAP000_SB048_autow_uv.MS
+</pre></div>
+
+
+<p>The residual with default configurations (no multiscal) show large
+ patterns with large intensity, while the residual with multiscale is
+ flat and randomly distributed.</p>
+<p>Note that the multiscale parameter is extremely time comsuming, for my
+ case, it takes about 50x times of calculation resource to generate a
+ image.</p>
+<p>Abbreviations</p>
+<p><strong>FOV</strong> field of view</p>
+<p><strong>FPS</strong> frame per second</p>
+<p><strong>PSF</strong> Point source spread</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href=".." title="Peijin Zhang" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  后退
+                </span>
+                Peijin Zhang
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../timeline/" title="时间线" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  前进
+                </span>
+                时间线
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+   <!--     
+   -->
+      &copy; 2019 USTC  &middot P.J.Zhang | Thanks for visiting as the <IMG SRC="/cgi-bin/Count.cgi?df=YourID.dat"> Visitor
+
+      </div>
+      
+        
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.css">
+    <a href="https://www.zhihu.com/people/pjer" class="md-footer-social__link"><img alt="zhihu" src="http://home.ustc.edu.cn/~pjer1316/img/zhihu.ico"></a>
+    
+      <a href="https://github.com/Pjer-zhang" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/peijin94" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://www.linkedin.com/in/pjer-zhang-92083986" class="md-footer-social__link fa fa-linkedin"></a>
+    
+      <a href="https://www.instagram.com/peijin94/" class="md-footer-social__link fa fa-instagram"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.b41f3d20.js"></script>
+      
+        
+        
+          
+          <script src="../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+                <script src="../assets/javascripts/lunr/tinyseg.js"></script>
+              
+              
+                <script src="../assets/javascripts/lunr/lunr.jp.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+        <script src="http://home.ustc.edu.cn/~pjer1316/MathJax/MathJax.js?config=TeX-AMS_HTML"></script>
+      
+    
+    
+      
+        <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-132863546-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(a){a.host!=document.location.host&&a.addEventListener("click",function(){var e=a.getAttribute("data-md-action")||"follow";ga("send","event","outbound",e,a.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+  </body>
+</html>
