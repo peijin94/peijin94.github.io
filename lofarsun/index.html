@@ -774,7 +774,7 @@ of the solar imaging and dynamic spectrum data.</p>
 <p>All the code mentioned in this page can be found in <a href="https://github.com/Pjer-zhang/LOFAR_Solar">github</a></p>
 <p>Some of the frequently used functions have been packed into a module : <strong>LofarSun</strong>, a simple demo :  <a href="/static/demo.html">demo</a></p>
 <h2 id="calibration">Calibration<a class="headerlink" href="#calibration" title="Permanent link">&para;</a></h2>
-<p>The calibration uses a well know and stable source to convert all the
+<p>The calibration uses a well known and stable source to convert all the
 signals received by different antenna to a same reference level.</p>
 <p>This can be done by following the steps below:</p>
 <ul>
@@ -842,8 +842,8 @@ to calibrate the MS files in batch.</p>
 <p>For the solar interferometry, the calibration is essential. Figure 1
 shows the difference between the calibrated and un-calibrated data</p>
 <p><img alt="demoimg" src="../media/image1.png" />
-<img alt="demoimg" src="../media/image2.png" />
-Figure 1. The image result of calibrated and un-calibrated data</p>
+<img alt="demoimg" src="../media/image2.png" /></p>
+<p>Figure 1. The image result of calibrated and un-calibrated data</p>
 <h2 id="imaging">Imaging<a class="headerlink" href="#imaging" title="Permanent link">&para;</a></h2>
 <p>After the calibration, the produced file [sun-autow.MS] is ready for
 imaging, here we use the software [wsclean] to produce the solar radio
@@ -861,7 +861,7 @@ in this link :
 
 
 <p>Larger iterations and more tweaking with these parameters can help
-making a better image. Details about the parameters are introduced in
+make a better image. Details about the parameters are introduced in
 the imaging brew section.</p>
 <h2 id="image-inspection">Image inspection<a class="headerlink" href="#image-inspection" title="Permanent link">&para;</a></h2>
 <h3 id="cleaned-image">CLEANed image<a class="headerlink" href="#cleaned-image" title="Permanent link">&para;</a></h3>
@@ -1012,7 +1012,7 @@ FOV. In this situation, the best choice is using as large FOV as
 possible with enough resolution. The enough resolution for --scale is
 usually 0.2*beamsize.</p>
 <h3 id="iteration-steps">Iteration steps<a class="headerlink" href="#iteration-steps" title="Permanent link">&para;</a></h3>
-<p>In each number of iteration steps determines how many times the PSF fits
+<p>The number of iteration steps determines how many times the PSF fits
 image, we can either use --niter to manually set the iteration step or
 use --auto-threshold to let wsclean decide when to stop. The parameter
 --niter is an "the more the better" parameter.</p>
