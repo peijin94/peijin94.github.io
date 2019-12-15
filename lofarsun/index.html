@@ -375,6 +375,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#module-lofarsun" title="Module LofarSun" class="md-nav__link">
+    Module LofarSun
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -716,6 +723,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#module-lofarsun" title="Module LofarSun" class="md-nav__link">
+    Module LofarSun
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -802,9 +816,9 @@ signals received by different antenna to a same reference level.</p>
 <li>Run auto-weight with NDPPP (Note: this step should be done for both
     sun and the calibrator):</li>
 </ul>
-<div class="codehilite"><pre><span></span>NDPPP <span class="nv">msin</span><span class="o">=</span>/path/to/calibrator.MS 
-<span class="nv">msout</span><span class="o">=</span>/path/to/calibrator-autow.MS 
-<span class="nv">steps</span><span class="o">=[]</span> 
+<div class="codehilite"><pre><span></span>NDPPP <span class="nv">msin</span><span class="o">=</span>/path/to/calibrator.MS
+<span class="nv">msout</span><span class="o">=</span>/path/to/calibrator-autow.MS
+<span class="nv">steps</span><span class="o">=[]</span>
 
 msin.autoweight<span class="o">=</span>True
 </pre></div>
@@ -822,7 +836,7 @@ gaincal.solint<span class="o">=</span><span class="m">4</span> <span class="se">
 gaincal.sources<span class="o">=</span>TauAGG <span class="se">\</span>
 gaincal.sourcedb<span class="o">=</span>TauA.sourcedb <span class="se">\</span>
 gaincal.onebeamperpatch<span class="o">=</span>True <span class="se">\</span>
-gaincal.caltype<span class="o">=</span>diagonal 
+gaincal.caltype<span class="o">=</span>diagonal
 </pre></div>
 
 
@@ -835,7 +849,7 @@ msin.datacolumn<span class="o">=</span>DATA <span class="se">\</span>
 msout.datacolumn<span class="o">=</span>CORR_NO_BEAM <span class="se">\</span>
 <span class="nv">steps</span><span class="o">=[</span>applycal<span class="o">]</span> <span class="se">\</span>
 applycal.parmdb<span class="o">=</span>/path/to/calibrator-autow.MS/instrument <span class="se">\</span>
-applycal.updateweights<span class="o">=</span>True 
+applycal.updateweights<span class="o">=</span>True
 </pre></div>
 
 
@@ -847,7 +861,7 @@ applycal.updateweights<span class="o">=</span>True
 msin.datacolumn<span class="o">=</span>CORR_NO_BEAM <span class="se">\</span>
 msout.datacolumn<span class="o">=</span>CORRECTED_DATA <span class="se">\</span>
 <span class="nv">steps</span> <span class="o">=[</span>applybeam<span class="o">]</span> <span class="se">\</span>
-applybeam.updateweights<span class="o">=</span>True 
+applybeam.updateweights<span class="o">=</span>True
 </pre></div>
 
 
@@ -898,7 +912,8 @@ kvis filename.fits
 <p>This commands will show you the image without the coordinate:</p>
 <p><img alt="demoimg" src="../media/image3.png" /></p>
 <p><strong>Figure 1.</strong> The image shown in [display]</p>
-<p>For solar image after wsclean, one can use <strong>displayws.py:</strong></p>
+<p>For solar image after wsclean, ~~one can use <strong>displayws.py:</strong> ~~</p>
+<p>(deprecated now, see <a href="https://github.com/Pjer-zhang/LOFAR_Solar">LofarSun</a> for detail)</p>
 <div class="codehilite"><pre><span></span>python displayws.py -h
 </pre></div>
 
@@ -977,6 +992,22 @@ UV coverage using the previous script:</p>
 coverage in wavenumber space. A sample UV coverage looks like:</p>
 <p><img alt="demoimg" src="../media/image6.png" />
 Figure 4. The UV coverage</p>
+<h3 id="module-lofarsun">Module LofarSun<a class="headerlink" href="#module-lofarsun" title="Permanent link">&para;</a></h3>
+<p>For scientific use, the module LofarSun can provide the <strong>Brightness temperature (Tb)</strong> map of the sun, and it is quite simple:</p>
+<div class="codehilite"><pre><span></span><span class="c1"># import everything we need</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">lofarSun.lofarData</span> <span class="kn">import</span> <span class="n">LofarDataBF</span><span class="p">,</span> <span class="n">LofarDataCleaned</span>
+
+<span class="c1"># process interferometry data</span>
+<span class="n">lofar_cleaned</span> <span class="o">=</span> <span class="n">LofarDataCleaned</span><span class="p">()</span>
+<span class="n">lofar_cleaned</span><span class="o">.</span><span class="n">load_fits</span><span class="p">(</span><span class="s1">&#39;SB058-t0032-image.fits&#39;</span><span class="p">)</span>
+<span class="n">lofar_cleaned</span><span class="o">.</span><span class="n">plot_image</span><span class="p">()</span>
+</pre></div>
+
+
+<p>which gives you:</p>
+<p><img alt="demoimg" src="../media/lofarsungit.png" /></p>
 <h2 id="image-brewing">Image Brewing<a class="headerlink" href="#image-brewing" title="Permanent link">&para;</a></h2>
 <p>Wsclean is a complex and powerful software, it can produce amazing image
 when the parameters are set properly, in this section, we introduce a
