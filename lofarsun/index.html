@@ -44,7 +44,7 @@
         <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.2.0">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-3.2.0">
     
     
       
@@ -91,7 +91,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="http://home.ustc.edu.cn/~pjer1316" title="Peijin Zhang" class="md-header-nav__button md-logo">
+        <a href="http://home.ustc.edu.cn/~pjer1316/" title="Peijin Zhang" class="md-header-nav__button md-logo">
           
             <i class="md-icon"></i>
           
@@ -225,7 +225,7 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="http://home.ustc.edu.cn/~pjer1316" title="Peijin Zhang" class="md-nav__button md-logo">
+    <a href="http://home.ustc.edu.cn/~pjer1316/" title="Peijin Zhang" class="md-nav__button md-logo">
       
         <i class="md-icon"></i>
       
@@ -804,27 +804,25 @@ signals received by different antenna to a same reference level.</p>
 <ul>
 <li>Create the source.db file with a sky model of the calibrator</li>
 </ul>
-<div class="codehilite"><pre><span></span>makesourcedb <span class="k">in</span><span class="o">=</span>/path/to/TauA.skymodel <span class="nv">out</span><span class="o">=</span>TauA.sourcedb
-</pre></div>
-
+<div class="codehilite"><pre><span></span><code>makesourcedb <span class="k">in</span><span class="o">=</span>/path/to/TauA.skymodel <span class="nv">out</span><span class="o">=</span>TauA.sourcedb
+</code></pre></div>
 
 <ul>
 <li>Run auto-weight with NDPPP (Note: this step should be done for both
     sun and the calibrator):</li>
 </ul>
-<div class="codehilite"><pre><span></span>NDPPP <span class="nv">msin</span><span class="o">=</span>/path/to/calibrator.MS
+<div class="codehilite"><pre><span></span><code>NDPPP <span class="nv">msin</span><span class="o">=</span>/path/to/calibrator.MS
 <span class="nv">msout</span><span class="o">=</span>/path/to/calibrator-autow.MS
 <span class="nv">steps</span><span class="o">=[]</span>
 
 msin.autoweight<span class="o">=</span>True
-</pre></div>
-
+</code></pre></div>
 
 <ul>
 <li>Use the observation of the calibrator to predict the parameters for
     the calculation applied to the solar observation</li>
 </ul>
-<div class="codehilite"><pre><span></span>NDPPP <span class="nv">msin</span><span class="o">=</span>/path2/to/calibrator-autow.ms <span class="se">\</span>
+<div class="codehilite"><pre><span></span><code>NDPPP <span class="nv">msin</span><span class="o">=</span>/path2/to/calibrator-autow.ms <span class="se">\</span>
 <span class="nv">Msout</span><span class="o">=</span>. <span class="se">\</span>
 <span class="nv">steps</span><span class="o">=[</span>gaincal<span class="o">]</span> <span class="se">\</span>
 gaincal.usebeammodel<span class="o">=</span>True  <span class="se">\</span>
@@ -833,33 +831,30 @@ gaincal.sources<span class="o">=</span>TauAGG <span class="se">\</span>
 gaincal.sourcedb<span class="o">=</span>TauA.sourcedb <span class="se">\</span>
 gaincal.onebeamperpatch<span class="o">=</span>True <span class="se">\</span>
 gaincal.caltype<span class="o">=</span>diagonal
-</pre></div>
-
+</code></pre></div>
 
 <ul>
 <li>Apply the parameters predicted by step (3)</li>
 </ul>
-<div class="codehilite"><pre><span></span>NDPPP <span class="nv">msin</span><span class="o">=</span>/path2/to/sun-autow.ms <span class="se">\</span>
+<div class="codehilite"><pre><span></span><code>NDPPP <span class="nv">msin</span><span class="o">=</span>/path2/to/sun-autow.ms <span class="se">\</span>
 <span class="nv">msout</span><span class="o">=</span>. <span class="se">\</span>
 msin.datacolumn<span class="o">=</span>DATA <span class="se">\</span>
 msout.datacolumn<span class="o">=</span>CORR_NO_BEAM <span class="se">\</span>
 <span class="nv">steps</span><span class="o">=[</span>applycal<span class="o">]</span> <span class="se">\</span>
 applycal.parmdb<span class="o">=</span>/path/to/calibrator-autow.MS/instrument <span class="se">\</span>
 applycal.updateweights<span class="o">=</span>True
-</pre></div>
-
+</code></pre></div>
 
 <ul>
 <li>Apply the beam of the calculation for the LOFAR station:</li>
 </ul>
-<div class="codehilite"><pre><span></span>NDPPP <span class="nv">msin</span><span class="o">=</span>sun-autow.MS <span class="se">\</span>
+<div class="codehilite"><pre><span></span><code>NDPPP <span class="nv">msin</span><span class="o">=</span>sun-autow.MS <span class="se">\</span>
 <span class="nv">msout</span><span class="o">=</span>. <span class="se">\</span>
 msin.datacolumn<span class="o">=</span>CORR_NO_BEAM <span class="se">\</span>
 msout.datacolumn<span class="o">=</span>CORRECTED_DATA <span class="se">\</span>
 <span class="nv">steps</span> <span class="o">=[</span>applybeam<span class="o">]</span> <span class="se">\</span>
 applybeam.updateweights<span class="o">=</span>True
-</pre></div>
-
+</code></pre></div>
 
 <p>The steps (2)-(5) are integrated in the script <strong>auto_sun_calib.py</strong>
 to calibrate the MS files in batch.</p>
@@ -875,14 +870,13 @@ image from the visibilities. The full document of wsclean can be found
 in this link :
 <a href="https://sourceforge.net/p/wsclean/wiki/Home/">[https://sourceforge.net/p/wsclean/wiki/Home/]{.underline}</a></p>
 <p>For the solar imaging, we use the following parameters:</p>
-<div class="codehilite"><pre><span></span>wsclean -j <span class="m">40</span> -mem <span class="m">30</span> -no-reorder -no-update-model-required <span class="se">\</span>
+<div class="codehilite"><pre><span></span><code>wsclean -j <span class="m">40</span> -mem <span class="m">30</span> -no-reorder -no-update-model-required <span class="se">\</span>
 -mgain <span class="m">0</span>.3 -weight briggs <span class="m">0</span> -size <span class="m">512</span> <span class="m">512</span> <span class="se">\</span>
 -scale 10asec -pol I -data-column CORRECTED_DATA <span class="se">\</span>
 -niter <span class="m">1000</span> -intervals-out <span class="m">1</span> -interval <span class="m">10</span> <span class="m">11</span> <span class="se">\</span>
 -name /path/to/prefix <span class="se">\</span>
 /path/to/sun-autow.MS
-</pre></div>
-
+</code></pre></div>
 
 <p>Larger iterations and more tweaking with these parameters can help
 make a better image. Details about the parameters are introduced in
@@ -895,24 +889,21 @@ plot the data from the shell command and see the image from a pop-up
 window.</p>
 <p>For general purpose of the fits inspection, one can use display or kvis
 command to inspect the image:</p>
-<div class="codehilite"><pre><span></span>display filename.fits
-</pre></div>
-
+<div class="codehilite"><pre><span></span><code>display filename.fits
+</code></pre></div>
 
 <p>Or:</p>
-<div class="codehilite"><pre><span></span>module load karma
+<div class="codehilite"><pre><span></span><code>module load karma
 kvis filename.fits
-</pre></div>
-
+</code></pre></div>
 
 <p>This commands will show you the image without the coordinate:</p>
 <p><img alt="demoimg" src="../media/image3.png" /></p>
 <p><strong>Figure 1.</strong> The image shown in [display]</p>
 <p>For solar image after wsclean, one can use displayws.py:
 (<strong>deprecated now, see <a href="https://github.com/Pjer-zhang/LOFAR_Solar">LofarSun</a> for detail</strong>)</p>
-<div class="codehilite"><pre><span></span>python displayws.py -h
-</pre></div>
-
+<div class="codehilite"><pre><span></span><code>python displayws.py -h
+</code></pre></div>
 
 <p>displayws.py version 0.01 [Python2]
 by Peijin.Zhang 2019</p>
@@ -924,11 +915,10 @@ by Peijin.Zhang 2019</p>
 <p>-h --help Display this information</p>
 <p>-o --out Save the result without display</p>
 <p>example:</p>
-<div class="codehilite"><pre><span></span>displayws.py fname.fits -t -n
+<div class="codehilite"><pre><span></span><code>displayws.py fname.fits -t -n
 displayws.py fname.fits
 displayws.py fname.fits -o save.png
-</pre></div>
-
+</code></pre></div>
 
 <p>This script can give us a plot of the radio in the Heliocentric coordinate, with Arc-Second axis, and the time and frequency channel will be shown in the title and legend in the plot, also the beam shape given from the parameters given by the fits header:</p>
 <p><strong>[BMAJ]</strong>: The major axis of the beam.</p>
@@ -939,12 +929,11 @@ displayws.py fname.fits -o save.png
 <p>In displayws.py the beam shape experience the same transform as the sun
 to the Heliocentric coordinate. And with <strong>--t --n</strong> arguments, one can
 see the full content of the fits header.</p>
-<div class="codehilite"><pre><span></span>python displayws.py fits<span class="se">\_</span>test<span class="se">\_</span>par/SB028-image.fits -n -t
-</pre></div>
-
+<div class="codehilite"><pre><span></span><code>python displayws.py fits<span class="se">\_</span>test<span class="se">\_</span>par/SB028-image.fits -n -t
+</code></pre></div>
 
 <p>output:</p>
-<div class="codehilite"><pre><span></span>[INFO] Do not show the image
+<div class="codehilite"><pre><span></span><code>[INFO] Do not show the image
 [INFO] Show the header of the wsfile
 SIMPLE = T / file does conform to FITS standard
 BITPIX = -32 / number of bits per data pixel
@@ -959,8 +948,7 @@ HISTORY weight briggs 0 -size 512 512 -scale 10.5469asec -pol I -data-column COR
 HISTORY RECTED\_DATA -niter 500 -intervals-out 1 -interval 27250 27255 -fit-beam
 HISTORY -make-psf -name /data/scratch/zhang/fits\_test\_par/SB028 /data/scratch/zh
 HISTORY ang/MS/L701913\_SAP000\_SB028\_autow\_uv.MS
-</pre></div>
-
+</code></pre></div>
 
 <p>I also recommend the Jupyter Notebook for the data interaction, which
 can show image inline the script.</p>
@@ -969,9 +957,8 @@ can show image inline the script.</p>
 residual image is flat and the positive and negative values are randomly
 distributed. One can judge the quality of a CLEANed image by comparing
 the peak values of the CLEANed image and its residual image:</p>
-<div class="codehilite"><pre><span></span>python displayws.py /path/to/XXX-residual.fits
-</pre></div>
-
+<div class="codehilite"><pre><span></span><code>python displayws.py /path/to/XXX-residual.fits
+</code></pre></div>
 
 <p>A good residual of solar image looks like:</p>
 <p><img alt="demoimg" src="../media/image5.png" /></p>
@@ -980,9 +967,8 @@ the peak values of the CLEANed image and its residual image:</p>
 <p>The UV coverage information can be saved by wsclean by append
 <strong>--save-uv</strong> parameter to the wsclean command. And one can inspect the
 UV coverage using the previous script:</p>
-<div class="codehilite"><pre><span></span>python displayws.py /path/to/XXX-uv-real.fits
-</pre></div>
-
+<div class="codehilite"><pre><span></span><code>python displayws.py /path/to/XXX-uv-real.fits
+</code></pre></div>
 
 <p>If there is '--uv' string in the input file name, it will show the UV
 coverage in wavenumber space. A sample UV coverage looks like:</p>
@@ -990,7 +976,7 @@ coverage in wavenumber space. A sample UV coverage looks like:</p>
 Figure 4. The UV coverage</p>
 <h3 id="module-lofarsun">Module LofarSun<a class="headerlink" href="#module-lofarsun" title="Permanent link">&para;</a></h3>
 <p>For scientific use, the module LofarSun can provide the <strong>Brightness temperature (Tb)</strong> map of the sun, and it is quite simple:</p>
-<div class="codehilite"><pre><span></span><span class="c1"># import everything we need</span>
+<div class="codehilite"><pre><span></span><code><span class="c1"># import everything we need</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">from</span> <span class="nn">lofarSun.lofarData</span> <span class="kn">import</span> <span class="n">LofarDataBF</span><span class="p">,</span> <span class="n">LofarDataCleaned</span>
@@ -999,8 +985,7 @@ Figure 4. The UV coverage</p>
 <span class="n">lofar_cleaned</span> <span class="o">=</span> <span class="n">LofarDataCleaned</span><span class="p">()</span>
 <span class="n">lofar_cleaned</span><span class="o">.</span><span class="n">load_fits</span><span class="p">(</span><span class="s1">&#39;SB058-t0032-image.fits&#39;</span><span class="p">)</span>
 <span class="n">lofar_cleaned</span><span class="o">.</span><span class="n">plot_image</span><span class="p">()</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>which gives you:</p>
 <p><img alt="demoimg" src="../media/lofarsungit.png" /></p>
@@ -1017,26 +1002,24 @@ with of a pixel.</p>
 result in totally different image. The following is an example of solar
 imaging with different <strong>--size</strong></p>
 <p>Configuration of image (1)</p>
-<div class="codehilite"><pre><span></span>wsclean -j <span class="m">40</span> -mem <span class="m">80</span> -no-reorder -no-update-model-required<span class="se">\</span>
+<div class="codehilite"><pre><span></span><code>wsclean -j <span class="m">40</span> -mem <span class="m">80</span> -no-reorder -no-update-model-required<span class="se">\</span>
 -mgain <span class="m">0</span>.7 -weight briggs <span class="m">0</span> -size <span class="m">1000</span> <span class="m">1000</span> <span class="se">\</span>
 -scale 3asec -pol I -auto-mask <span class="m">3</span> <span class="se">\</span>
 -auto-threshold <span class="m">0</span>.3 -data-column CORRECTED_DATA <span class="se">\</span>
 -niter <span class="m">1000</span> -intervals-out <span class="m">1</span> -interval <span class="m">27250</span> <span class="m">27255</span> <span class="se">\</span>
 -fit-beam -make-psf <span class="se">\</span>
 -name /path/to/output/name /path/to/input.MS
-</pre></div>
-
+</code></pre></div>
 
 <p>Configuration of image (2)</p>
-<div class="codehilite"><pre><span></span>wsclean -j <span class="m">40</span> -mem <span class="m">80</span> -no-reorder -no-update-model-required<span class="se">\</span>
+<div class="codehilite"><pre><span></span><code>wsclean -j <span class="m">40</span> -mem <span class="m">80</span> -no-reorder -no-update-model-required<span class="se">\</span>
 -mgain <span class="m">0</span>.7 -weight briggs <span class="m">0</span> -size <span class="m">6000</span> <span class="m">6000</span> <span class="se">\</span>
 -scale 3asec -pol I -auto-mask <span class="m">3</span> <span class="se">\</span>
 -auto-threshold <span class="m">0</span>.3 -data-column CORRECTED_DATA <span class="se">\</span>
 -niter <span class="m">1000</span> -intervals-out <span class="m">1</span> -interval <span class="m">27250</span> <span class="m">27255</span> <span class="se">\</span>
 -fit-beam -make-psf <span class="se">\</span>
 -name /path/to/output/name /path/to/input.MS
-</pre></div>
-
+</code></pre></div>
 
 <p><img alt="demoimg" src="../media/image7.png" />
 <img alt="demoimg" src="../media/image8.png" /></p>
@@ -1075,7 +1058,7 @@ into consideration.</p>
  <img alt="demoimg" src="../media/image12.png" /></p>
 <p>Figure 6. The residual map of the imaging with and without multiscale</p>
 <p>Corresponding wsclean command is:</p>
-<div class="codehilite"><pre><span></span>wsclean -j <span class="m">40</span> -mem <span class="m">90</span> -no-reorder -no-update-model-required <span class="se">\</span>
+<div class="codehilite"><pre><span></span><code>wsclean -j <span class="m">40</span> -mem <span class="m">90</span> -no-reorder -no-update-model-required <span class="se">\</span>
 -mgain <span class="m">0</span>.8 -weight briggs <span class="m">0</span> -size <span class="m">1024</span> <span class="m">1024</span> <span class="se">\</span>
 -scale 4asec -pol I -auto-mask <span class="m">6</span> -multiscale <span class="se">\</span>
 -auto-threshold <span class="m">2</span> -data-column CORRECTED_DATA <span class="se">\</span>
@@ -1083,8 +1066,7 @@ into consideration.</p>
 -fit-beam -make-psf -name <span class="se">\</span>
 /data/scratch/zhang/fits_test_par/SB048testx <span class="se">\</span>
 /data/scratch/zhang/MS/L701913_SAP000_SB048_autow_uv.MS
-</pre></div>
-
+</code></pre></div>
 
 <p>The residual with default configurations (no multiscal) show large
  patterns with large intensity, while the residual with multiscale is
@@ -1162,7 +1144,7 @@ into consideration.</p>
     <link rel="stylesheet" href="../assets/fonts/font-awesome.css">
     <a href="https://www.zhihu.com/people/pjer" class="md-footer-social__link"><img alt="zhihu" src="http://home.ustc.edu.cn/~pjer1316/img/zhihu.ico"></a>
     
-      <a href="https://github.com/Pjer-zhang" class="md-footer-social__link fa fa-github"></a>
+      <a href="https://github.com/peijin94" class="md-footer-social__link fa fa-github"></a>
     
       <a href="https://twitter.com/peijin94" class="md-footer-social__link fa fa-twitter"></a>
     
@@ -1198,7 +1180,7 @@ into consideration.</p>
           
         
       
-      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      <script>app.initialize({version:"1.2.3",url:{base:".."}})</script>
       
         <script src="http://home.ustc.edu.cn/~pjer1316/MathJax/MathJax.js?config=TeX-AMS_HTML"></script>
       

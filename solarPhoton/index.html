@@ -44,7 +44,7 @@
         <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.2.0">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-3.2.0">
     
     
       
@@ -91,7 +91,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="http://home.ustc.edu.cn/~pjer1316" title="Peijin Zhang" class="md-header-nav__button md-logo">
+        <a href="http://home.ustc.edu.cn/~pjer1316/" title="Peijin Zhang" class="md-header-nav__button md-logo">
           
             <i class="md-icon"></i>
           
@@ -225,7 +225,7 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="http://home.ustc.edu.cn/~pjer1316" title="Peijin Zhang" class="md-nav__button md-logo">
+    <a href="http://home.ustc.edu.cn/~pjer1316/" title="Peijin Zhang" class="md-nav__button md-logo">
       
         <i class="md-icon"></i>
       
@@ -671,69 +671,69 @@
 <p>这样的吸收和再发射过程导致光子经历所谓碰撞之后的出射方向没有任何关系。这样的过程就可以用随机行走来描述。</p>
 <p>假设一个光子从原点0开始，在一维的空间里走，每走单位长度1就会碰撞一次，有可能改变方向有可能维持原有方向。所以第一步的结果可能是+1 或者 -1 。 如果第一步是+1 那么第二部分的结果可能是0 或者+2。同样的，如果第一步是-1 则下一步是等可能性的-2或者0 。就这样一直漫无目的的走，直到走到边界的位置。</p>
 <p>在这个过程中有个很重要的概念是：平均自由程（这里记为d）。就是平均下来一次碰撞所经历的路程。现在在二维情形下考虑这个问题：</p>
-<div>
+<div class="arithmatex">
 <div class="MathJax_Preview">\Delta x = d \cos{\theta}</div>
 <script type="math/tex; mode=display">\Delta x = d \cos{\theta}</script>
 </div>
-<div>
+<div class="arithmatex">
 <div class="MathJax_Preview">\Delta y= d \sin{\theta}</div>
 <script type="math/tex; mode=display">\Delta y= d \sin{\theta}</script>
 </div>
 <p>经历N次碰撞之后的结果是：</p>
-<div>
+<div class="arithmatex">
 <div class="MathJax_Preview">x = \sum^N_{i=1} {d \cos(\theta_i)}</div>
 <script type="math/tex; mode=display">x = \sum^N_{i=1} {d \cos(\theta_i)}</script>
 </div>
-<div>
+<div class="arithmatex">
 <div class="MathJax_Preview">y= \sum^N_{i=1} {d \sin(\theta_i)}</div>
 <script type="math/tex; mode=display">y= \sum^N_{i=1} {d \sin(\theta_i)}</script>
 </div>
 <p>N次碰撞之后距离原点的平均距离是：</p>
-<div>
+<div class="arithmatex">
 <div class="MathJax_Preview">r = \sqrt{x^2+y^2} = d\sqrt{(\sum\cos\theta_i)^2+(\sum\sin\theta_i)^2}</div>
 <script type="math/tex; mode=display">r = \sqrt{x^2+y^2} = d\sqrt{(\sum\cos\theta_i)^2+(\sum\sin\theta_i)^2}</script>
 </div>
 <p>又因为任何两次碰撞之间的角度不相关所以有</p>
-<div>
+<div class="arithmatex">
 <div class="MathJax_Preview">\bar{r} = d \sqrt{\sum\cos^2\theta_i+\sum\sin^2\theta_i + \sum_{i\ne j}\cos \theta_i \cos \theta_j + \sum_{i\ne j}\sin \theta_i \sin \theta_j}</div>
 <script type="math/tex; mode=display">\bar{r} = d \sqrt{\sum\cos^2\theta_i+\sum\sin^2\theta_i + \sum_{i\ne j}\cos \theta_i \cos \theta_j + \sum_{i\ne j}\sin \theta_i \sin \theta_j}</script>
 </div>
-<div>
+<div class="arithmatex">
 <div class="MathJax_Preview">= d\sqrt{\sum\cos^2\theta_i+\sum\sin^2\theta_i } = d \sqrt{N}</div>
 <script type="math/tex; mode=display">= d\sqrt{\sum\cos^2\theta_i+\sum\sin^2\theta_i } = d \sqrt{N}</script>
 </div>
-<p>也就是经历N步之后的平均距离是<span><span class="MathJax_Preview">d\sqrt{N}</span><script type="math/tex">d\sqrt{N}</script></span> （注：<span><span class="MathJax_Preview">\bar{r}=d\sqrt{N}</span><script type="math/tex">\bar{r}=d\sqrt{N}</script></span>这个结论对于三维同样适用，感兴趣的读者可以推导一下）。光子从中心走到边缘的时间取决于平均自由程<span><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span>。定性的来说平均自由程有如下表达式：</p>
-<div>
+<p>也就是经历N步之后的平均距离是<span class="arithmatex"><span class="MathJax_Preview">d\sqrt{N}</span><script type="math/tex">d\sqrt{N}</script></span> （注：<span class="arithmatex"><span class="MathJax_Preview">\bar{r}=d\sqrt{N}</span><script type="math/tex">\bar{r}=d\sqrt{N}</script></span>这个结论对于三维同样适用，感兴趣的读者可以推导一下）。光子从中心走到边缘的时间取决于平均自由程<span class="arithmatex"><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span>。定性的来说平均自由程有如下表达式：</p>
+<div class="arithmatex">
 <div class="MathJax_Preview">d=\frac{1}{k\rho}</div>
 <script type="math/tex; mode=display">d=\frac{1}{k\rho}</script>
 </div>
-<p>其中 <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 是单位质量的吸收系数，而 <span><span class="MathJax_Preview">\rho</span><script type="math/tex">\rho</script></span> 是密度，对于太阳辐射区，有：</p>
-<div>
+<p>其中 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 是单位质量的吸收系数，而 <span class="arithmatex"><span class="MathJax_Preview">\rho</span><script type="math/tex">\rho</script></span> 是密度，对于太阳辐射区，有：</p>
+<div class="arithmatex">
 <div class="MathJax_Preview">k = 10 m^2/kg</div>
 <script type="math/tex; mode=display">k = 10 m^2/kg</script>
 </div>
-<div>
+<div class="arithmatex">
 <div class="MathJax_Preview">\rho \approx 10000 kg/m^3</div>
 <script type="math/tex; mode=display">\rho \approx 10000 kg/m^3</script>
 </div>
-<p>所以d大致是 <span><span class="MathJax_Preview">10^{-5}</span><script type="math/tex">10^{-5}</script></span> 的量级。</p>
-<p>辐射区的厚度是 <span><span class="MathJax_Preview">10^8 m</span><script type="math/tex">10^8 m</script></span> 的量级。</p>
+<p>所以d大致是 <span class="arithmatex"><span class="MathJax_Preview">10^{-5}</span><script type="math/tex">10^{-5}</script></span> 的量级。</p>
+<p>辐射区的厚度是 <span class="arithmatex"><span class="MathJax_Preview">10^8 m</span><script type="math/tex">10^8 m</script></span> 的量级。</p>
 <p>所以可以算出来N：</p>
-<p><span><span class="MathJax_Preview">N = (r/d)^2 = 10^{26}</span><script type="math/tex">N = (r/d)^2 = 10^{26}</script></span></p>
+<p><span class="arithmatex"><span class="MathJax_Preview">N = (r/d)^2 = 10^{26}</span><script type="math/tex">N = (r/d)^2 = 10^{26}</script></span></p>
 <p>进而可以给出总路程：</p>
-<p><span><span class="MathJax_Preview"> S = N d = 10^{21}  </span><script type="math/tex"> S = N d = 10^{21}  </script></span></p>
+<p><span class="arithmatex"><span class="MathJax_Preview"> S = N d = 10^{21}  </span><script type="math/tex"> S = N d = 10^{21}  </script></span></p>
 <p>在这个路程上光子在致密介质中的波速要显著低于真空光速这里取1/10倍光速，则有： </p>
-<div>
+<div class="arithmatex">
 <div class="MathJax_Preview">t = \frac{S}{0.1 c} = 10^{14} sec \approx10^7 year</div>
 <script type="math/tex; mode=display">t = \frac{S}{0.1 c} = 10^{14} sec \approx10^7 year</script>
 </div>
 <h2 id="_4">结论<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<p><span><span class="MathJax_Preview">10^7</span><script type="math/tex">10^7</script></span>年就是我们估计的光子穿过辐射区所需要的平均时间。</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">10^7</span><script type="math/tex">10^7</script></span>年就是我们估计的光子穿过辐射区所需要的平均时间。</p>
 <p>上面的估算用到了很多假设和近似，所以是一个非常粗略而定性的估计，仅仅给出一个大致的数量级，不过但看这个数量级也是挺惊人的。</p>
 <p>参考：</p>
 <ul>
-<li>[1] 2006 Lisa [<a href="http://physics.wooster.edu/JrIS/Files/Walker_Web_Article.pdf">http://physics.wooster.edu/JrIS/Files/Walker_Web_Article.pdf</a> ]  给出的结果是 <span><span class="MathJax_Preview">3*10^6</span><script type="math/tex">3*10^6</script></span> 年。</li>
-<li>[2] 1992 Mitalas, R [On the photon diffusion time scale for the sun]  给出的结果是 <span><span class="MathJax_Preview">1.7*10^5</span><script type="math/tex">1.7*10^5</script></span> 年</li>
+<li>[1] 2006 Lisa [<a href="http://physics.wooster.edu/JrIS/Files/Walker_Web_Article.pdf">http://physics.wooster.edu/JrIS/Files/Walker_Web_Article.pdf</a> ]  给出的结果是 <span class="arithmatex"><span class="MathJax_Preview">3*10^6</span><script type="math/tex">3*10^6</script></span> 年。</li>
+<li>[2] 1992 Mitalas, R [On the photon diffusion time scale for the sun]  给出的结果是 <span class="arithmatex"><span class="MathJax_Preview">1.7*10^5</span><script type="math/tex">1.7*10^5</script></span> 年</li>
 <li>[3] 图片来源 xinhuanet.com</li>
 </ul>
 <p>前人结果也是几万年到几十万年不等，因为我们对于太阳内部还知之甚少，仅仅通过日震学对于内部分层结构有所了解。所以光子经历时间的估计也只是能给出大致的数量级。</p>
@@ -803,7 +803,7 @@
     <link rel="stylesheet" href="../assets/fonts/font-awesome.css">
     <a href="https://www.zhihu.com/people/pjer" class="md-footer-social__link"><img alt="zhihu" src="http://home.ustc.edu.cn/~pjer1316/img/zhihu.ico"></a>
     
-      <a href="https://github.com/Pjer-zhang" class="md-footer-social__link fa fa-github"></a>
+      <a href="https://github.com/peijin94" class="md-footer-social__link fa fa-github"></a>
     
       <a href="https://twitter.com/peijin94" class="md-footer-social__link fa fa-twitter"></a>
     
@@ -839,7 +839,7 @@
           
         
       
-      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      <script>app.initialize({version:"1.2.3",url:{base:".."}})</script>
       
         <script src="http://home.ustc.edu.cn/~pjer1316/MathJax/MathJax.js?config=TeX-AMS_HTML"></script>
       
