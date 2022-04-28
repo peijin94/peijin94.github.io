@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<title>Solar Radio tool</title>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+
+
+<body>
+
+    <h1>Solar Radio tool</h1>
+    <h3> Frequency to density:</h3>
+    <p>
+      <label>Frequency</label>
+      <input id="inputFeet" type="number" placeholder="Input" oninput="TheConverterFreq(this.value)" onchange="TheConverterFreq(this.value)"> \(\rm Hz\)
+    </p>
+    <p> \(N_e\): <span id="outputDens">0</span> \(\rm (cm^{-3})\) Density </p>
+    
+
+    <h3> Density model:</h3>
+    <p>
+      <label>Radius</label>
+      <input id="inputFeet" type="number" placeholder="Input" oninput="TheConverterDens(this.value)" onchange="TheConverterDens(this.value)"> \(\rm R_\odot\)
+    </p>
+    
+
+        
+<div style="border:1px solid; padding: 0.2em;margin:0.3em;">
+    <p>Saito77 : \(N_e(r) = 1.36\times10^6  r^{-2.14} + 1.68\times10^8 r^{-6.13}\)</p>
+    <p> \(N_e\): <span id="saitoDens">0</span> \(\rm (cm^{-3})\) Density </p>
+    <p> \(f\): <span id="saitoFreq">0</span> \(\rm Hz \) Frequency </p>
+</div>
+
+    
+<div style="border:1px solid; padding: 0.2em;margin:0.3em;">
+    <p>Leblanc98 : \(N_e(r) = 
+        3.3\times 10^5 r^{-2.}+ 4.1 \times 10^6 r^{-4.}+8.0\times 10^7 r^{-6.}
+        \)
+    </p>
+    <p> \(N_e\): <span id="Leblanc98Dens">0</span> \(\rm (cm^{-3})\) Density </p>
+    <p> \(f\): <span id="Leblanc98Freq">0</span> \(\rm Hz \) Frequency </p>
+</div>
+
+    
+<div style="border:1px solid; padding: 0.2em;margin:0.3em;">
+    <p>Parker Fit : \(
+        N_{e0} = 4.8\times10^9 r^{-14}+
+        3\times10^8 r^{-6}+
+        1.4\times10^6 r^{-2.3} 
+        \)
+    </p>
+    <p> \(N_e\): <span id="ParkerDens">0</span> \(\rm (cm^{-3})\) Density </p>
+    <p> \(f\): <span id="ParkerFreq">0</span> \(\rm Hz \) Frequency </p>
+</div>
+
+    
+<div style="border:1px solid; padding: 0.2em;margin:0.3em;">
+    <p>Newkirk : \(N_e(r) = 4.2\times10^4 \times 10^{4.32/r})\)</p>
+    <p> \(N_e\): <span id="NewkirkDens">0</span> \(\rm (cm^{-3})\) Density </p>
+    <p> \(f\): <span id="NewkirkFreq">0</span> \(\rm Hz \) Frequency </p>
+</div>
+
+    
+
+
+        
+    
+</body>
+
+
+<script>
+
+function TheConverterFreq(valNum) {
+        document.getElementById("outputDens").innerHTML=Ne_f(valNum).toExponential(5);
+    }
+
+    
+    function TheConverterDens(valNum) {
+        document.getElementById("saitoDens").innerHTML=saito77(valNum).toExponential(5);
+        document.getElementById("saitoFreq").innerHTML=f_Ne(saito77(valNum)).toExponential(5);
+    
+        document.getElementById("Leblanc98Dens").innerHTML=leblanc98(valNum).toExponential(5);
+        document.getElementById("Leblanc98Freq").innerHTML=f_Ne(leblanc98(valNum)).toExponential(5);
+    
+        document.getElementById("ParkerDens").innerHTML=parkerfit(valNum).toExponential(5);
+        document.getElementById("ParkerFreq").innerHTML=f_Ne(parkerfit(valNum)).toExponential(5);
+    
+        document.getElementById("NewkirkDens").innerHTML=newkirk(valNum).toExponential(5);
+        document.getElementById("NewkirkFreq").innerHTML=f_Ne(newkirk(valNum)).toExponential(5);
+    
+    }
+    
+
+    function saito77(r){
+        return 1.36e6 * Math.pow(r,(-2.14)) + 1.68e8 * Math.pow(r,(-6.13))
+    }
+      
+    function leblanc98(r){
+        return 3.3e5* Math.pow(r,(-2.))+ 4.1e6 * Math.pow(r,(-4.))+8.0e7* Math.pow(r,(-6.))
+    }
+      
+    function parkerfit(r){
+        h0=144.0/6.96e5
+        h1=20.0/960.
+        nc=3e11*Math.exp(-(r-1.0e0)/h1)
+        return  4.8e9/Math.pow(r,14.) + 3e8/Math.pow(r,6.)+1.39e6/Math.pow(r,2.3+nc)
+    }
+      
+    function dndr_leblanc98(r){
+        return -2.*3.3e5* Math.pow(r,(-3.)) -4.*4.1e6 * Math.pow(r,(-5.)) -6.*8.0e7* Math.pow(r,(-7.))
+    }
+      
+    function newkirk(r){
+        return 4.2e4*Math.pow(10. ,(4.32/r))
+    }
+      
+    function f_Ne(N_e){
+        return 8.93e3 * Math.pow((N_e),(0.5))
+    }
+      
+    function Ne_f(f){
+        return Math.pow((f/8.93e3),2.0)
+    }
+</script>
+
+
+
+</html>
