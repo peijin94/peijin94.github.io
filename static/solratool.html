@@ -23,7 +23,9 @@
     <p>
       <label>Radius</label>
       <input id="inputFreq" type="number" placeholder="Input" oninput="TheConverterDens(this.value)" onchange="TheConverterDens(this.value)"> \(\rm R_\odot\)
-      <input id="inputFold" type="number" placeholder="1" oninput="TheConverterDens(inputFold.value)" onchange="TheConverterDens(inputFold.value)"> \(\rm R_\odot\)
+      <p></p>
+      <label> Fold </label>
+      <input id="inputFold" type="number" value="1" placeholder="1" oninput="TheConverterDens(inputFreq.value)" onchange="TheConverterDens(inputFreq.value)">\(\times\) Density model (Multiple number to density model)
     </p>
     
 
@@ -66,7 +68,7 @@
     
 
 
-        
+<a href="/">Home</a>
     
 </body>
 
@@ -79,17 +81,17 @@ function TheConverterFreq(valNum) {
 
     
     function TheConverterDens(valNum) {
-        document.getElementById("saitoDens").innerHTML=saito77(valNum).toExponential(5);
-        document.getElementById("saitoFreq").innerHTML=f_Ne(saito77(valNum)).toExponential(5);
+        document.getElementById("saitoDens").innerHTML=(saito77(valNum)*inputFold.value).toExponential(5);
+        document.getElementById("saitoFreq").innerHTML=f_Ne(saito77(valNum)*inputFold.value).toExponential(5);
     
-        document.getElementById("Leblanc98Dens").innerHTML=leblanc98(valNum).toExponential(5);
-        document.getElementById("Leblanc98Freq").innerHTML=f_Ne(leblanc98(valNum)).toExponential(5);
+        document.getElementById("Leblanc98Dens").innerHTML=(leblanc98(valNum)*inputFold.value).toExponential(5);
+        document.getElementById("Leblanc98Freq").innerHTML=f_Ne(leblanc98(valNum)*inputFold.value).toExponential(5);
     
-        document.getElementById("ParkerDens").innerHTML=parkerfit(valNum).toExponential(5);
+        document.getElementById("ParkerDens").innerHTML=(parkerfit(valNum)*inputFold.value).toExponential(5);
         document.getElementById("ParkerFreq").innerHTML=f_Ne(parkerfit(valNum)).toExponential(5);
     
-        document.getElementById("NewkirkDens").innerHTML=newkirk(valNum).toExponential(5);
-        document.getElementById("NewkirkFreq").innerHTML=f_Ne(newkirk(valNum)).toExponential(5);
+        document.getElementById("NewkirkDens").innerHTML=(newkirk(valNum)*inputFold.value).toExponential(5);
+        document.getElementById("NewkirkFreq").innerHTML=f_Ne(newkirk(valNum)*inputFold.value).toExponential(5);
     
     }
     
