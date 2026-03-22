@@ -9,6 +9,7 @@ This site presents Peijin Zhang's research profile and selected work in solar ra
 - Data Processing: https://pjzhang.cc/dataproc/
 - Inner Heliosphere: https://pjzhang.cc/innerhelio/
 - LOFAR Sun: https://pjzhang.cc/lofarsun/
+- Radio Sky Map (SPA): https://pjzhang.cc/skymap/
 
 ## Preferred citation targets
 - ORCID: https://orcid.org/0000-0001-6855-5799
