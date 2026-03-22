@@ -1,0 +1,19 @@
+# Peijin Zhang - Website
+
+This site presents Peijin Zhang's research profile and selected work in solar radio astronomy, electromagnetic wave propagation, and space weather.
+
+## Primary pages
+- Home (English): https://pjzhang.cc/
+- Home (Chinese): https://pjzhang.cc/index_ch/
+- Solar Radio: https://pjzhang.cc/solarradio/
+- Data Processing: https://pjzhang.cc/dataproc/
+- Inner Heliosphere: https://pjzhang.cc/innerhelio/
+- LOFAR Sun: https://pjzhang.cc/lofarsun/
+
+## Preferred citation targets
+- ORCID: https://orcid.org/0000-0001-6855-5799
+- Google Scholar: https://scholar.google.com/citations?user=7j9gGWQAAAAJ&hl=en
+
+## Contact
+- peijin.zhang@njit.edu
+- peijinzhang8@gmail.com

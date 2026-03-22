@@ -1,1 +1,70 @@
 img[alt=demoimg] { width: 400pt; }
+
+/*
+ * Neoteroi timeline: line on the left; title, date range, and body left-aligned.
+ */
+.cv-timeline.nt-timeline.vertical.left {
+  padding-left: 0 !important;
+  margin-right: 0;
+  max-width: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+.cv-timeline.nt-timeline.vertical.left .nt-timeline-item {
+  padding-left: 3.25rem !important;
+  text-align: left;
+}
+.cv-timeline.nt-timeline.vertical.left .nt-timeline-title,
+.cv-timeline.nt-timeline.vertical.left .nt-timeline-content {
+  text-align: left;
+}
+.cv-timeline.nt-timeline.vertical.left .nt-timeline-sub-title {
+  position: static !important;
+  display: block;
+  width: auto !important;
+  max-width: none !important;
+  left: auto !important;
+  right: auto !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-top: 0.05rem;
+  margin-bottom: 0;
+  text-align: left !important;
+  font-size: 0.85rem;
+  color: var(--md-default-fg-color--lighter, rgba(0, 0, 0, 0.55));
+}
+[data-md-color-scheme="slate"] .cv-timeline.nt-timeline.vertical.left .nt-timeline-sub-title {
+  color: var(--md-default-fg-color--lighter, rgba(255, 255, 255, 0.65));
+}
+
+/* Compact spacing (Neoteroi defaults are quite tall) */
+.cv-timeline.nt-timeline {
+  margin-top: 0.5rem !important;
+}
+.cv-timeline.nt-timeline .nt-timeline-before {
+  height: 4px !important;
+}
+.cv-timeline.nt-timeline .nt-timeline-after {
+  height: 8px !important;
+  margin-bottom: 0 !important;
+}
+.cv-timeline.nt-timeline .nt-timeline-items > div {
+  min-height: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0.35rem !important;
+}
+.cv-timeline.nt-timeline .nt-timeline-title {
+  margin: 0 !important;
+  line-height: 1.35;
+  font-size: 1rem !important;
+}
+.cv-timeline.nt-timeline .nt-timeline-content {
+  margin: 0.2rem 0 0 !important;
+  padding-bottom: 0.45rem !important;
+  line-height: 1.45;
+  border-bottom-width: 1px !important;
+}
+.cv-timeline.nt-timeline .nt-timeline-items > div:last-child .nt-timeline-content {
+  border-bottom: none;
+  padding-bottom: 0.15rem !important;
+}
