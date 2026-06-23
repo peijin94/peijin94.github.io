@@ -7,6 +7,8 @@ This site presents Peijin Zhang's research profile and selected work in solar ra
 - Home (Chinese): https://pjzhang.cc/index_ch/
 - Solar Radio: https://pjzhang.cc/solarradio/
 - Data Processing: https://pjzhang.cc/dataproc/
+- OVRO-LWA Solar Observation: https://pjzhang.cc/ovrolwasolar/
+- Solar Radio Data on Cloud: https://pjzhang.cc/solarradiocloud/
 - Inner Heliosphere: https://pjzhang.cc/innerhelio/
 - LOFAR Sun: https://pjzhang.cc/lofarsun/
 - Radio Sky Map (SPA): https://pjzhang.cc/skymap/
