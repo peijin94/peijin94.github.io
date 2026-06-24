@@ -1,22 +1,46 @@
-# Peijin Zhang - Website
+# Peijin Zhang — https://pjzhang.cc
 
-This site presents Peijin Zhang's research profile and selected work in solar radio astronomy, electromagnetic wave propagation, and space weather.
+> Personal site of Peijin Zhang (张沛锦), solar physicist and OVRO-LWA solar observation project scientist at New Jersey Institute of Technology (NJIT). Research areas: solar radio astronomy, electromagnetic wave propagation, inner heliosphere, and space weather.
 
-## Primary pages
-- Home (English): https://pjzhang.cc/
-- Home (Chinese): https://pjzhang.cc/index_ch/
-- Solar Radio: https://pjzhang.cc/solarradio/
-- Data Processing: https://pjzhang.cc/dataproc/
-- OVRO-LWA Solar Observation: https://pjzhang.cc/ovrolwasolar/
-- Solar Radio Data on Cloud: https://pjzhang.cc/solarradiocloud/
-- Inner Heliosphere: https://pjzhang.cc/innerhelio/
-- LOFAR Sun: https://pjzhang.cc/lofarsun/
-- Radio Sky Map (SPA): https://pjzhang.cc/skymap/
+## Canonical pages
 
-## Preferred citation targets
+### Home
+- [Home (English)](https://pjzhang.cc/): CV, publications, education, seminars, research overview.
+- [Home (中文版)](https://pjzhang.cc/index_ch/): Chinese-language profile and research summary.
+
+### Research
+- [Solar Radio](https://pjzhang.cc/solarradio/): Solar radio bursts and low-frequency solar radio observations.
+- [OVRO-LWA Solar Observation](https://pjzhang.cc/ovrolwasolar/): OVRO-LWA data portal, live spectrum stream, and observing workflow.
+- [Solar Radio Data on Cloud](https://pjzhang.cc/solarradiocloud/): Public AWS mirror of OVRO-LWA solar data products; `lwasolarutl` / boto3 access examples and Colab notebook.
+- [Data Processing](https://pjzhang.cc/dataproc/): Radio data processing, algorithms, and analysis methods.
+- [Inner Heliosphere](https://pjzhang.cc/innerhelio/): Propagation and scattering in the inner heliosphere, including Tau A (Crab Nebula) conjunction studies with OVRO-LWA.
+
+### Tools
+- [Radio Sky Map (SPA)](https://pjzhang.cc/skymap/): Browser-based interactive sky map for bright radio sources, Sun, Moon, and Jupiter (static single-page app).
+
+### More
+- [LOFAR Sun](https://pjzhang.cc/lofarsun/): LOFAR solar radio notes and resources.
+
+## Key external resources
+
+- OVRO-LWA data portal: https://ovsa.njit.edu/lwa/
+- OVRO-LWA live spectrum: https://ovsa.njit.edu/live/
+- OVRO-LWA solar data on AWS S3 explorer: https://ovro-lwa-solar.s3.us-west-2.amazonaws.com/index.html
+- Cloud data Colab example: https://colab.research.google.com/drive/1LpnVFZIuxaqwnYQz-4BruJAHkeVx8l3h
+- `lwasolarutl` utilities (S3 query/download): https://github.com/ovro-eovsa/lwa-solar-util
+- Radio Sky Map source: https://github.com/peijin94/radioskymap-spa
+
+## Citation & identity
+
 - ORCID: https://orcid.org/0000-0001-6855-5799
 - Google Scholar: https://scholar.google.com/citations?user=7j9gGWQAAAAJ&hl=en
+- GitHub: https://github.com/peijin94
 
 ## Contact
+
 - peijin.zhang@njit.edu
 - peijinzhang8@gmail.com
+
+## Sitemap
+
+- https://pjzhang.cc/sitemap.xml

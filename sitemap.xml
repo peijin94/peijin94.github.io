@@ -1,35 +1,35 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://pjzhang.cc/</loc>
-         <lastmod>2026-06-23</lastmod>
+         <lastmod>2026-06-24</lastmod>
     </url>
     <url>
          <loc>https://pjzhang.cc/dataproc/</loc>
-         <lastmod>2026-06-23</lastmod>
+         <lastmod>2026-06-24</lastmod>
     </url>
     <url>
          <loc>https://pjzhang.cc/index_ch/</loc>
-         <lastmod>2026-06-23</lastmod>
+         <lastmod>2026-06-24</lastmod>
     </url>
     <url>
          <loc>https://pjzhang.cc/innerhelio/</loc>
-         <lastmod>2026-06-23</lastmod>
+         <lastmod>2026-06-24</lastmod>
     </url>
     <url>
          <loc>https://pjzhang.cc/lofarsun/</loc>
-         <lastmod>2026-06-23</lastmod>
+         <lastmod>2026-06-24</lastmod>
     </url>
     <url>
          <loc>https://pjzhang.cc/ovrolwasolar/</loc>
-         <lastmod>2026-06-23</lastmod>
+         <lastmod>2026-06-24</lastmod>
     </url>
     <url>
          <loc>https://pjzhang.cc/solarradio/</loc>
-         <lastmod>2026-06-23</lastmod>
+         <lastmod>2026-06-24</lastmod>
     </url>
     <url>
          <loc>https://pjzhang.cc/solarradiocloud/</loc>
-         <lastmod>2026-06-23</lastmod>
+         <lastmod>2026-06-24</lastmod>
     </url>
-</urlset>
+<url><loc>https://pjzhang.cc/skymap/</loc><lastmod>2026-06-24</lastmod></url><url><loc>https://pjzhang.cc/llms.txt</loc><lastmod>2026-06-24</lastmod></url></urlset>
